@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GuV - Lernportal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Bilanz & GuV</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="bilanz.html">Bilanz</a></li>
+          <li class="nav-item"><a class="nav-link active" href="guv.html">GuV</a></li>
+          <li class="nav-item"><a class="nav-link" href="produktion.html">Produktion</a></li>
+          <li class="nav-item"><a class="nav-link" href="glossar.html">Glossar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <h1 class="text-primary mb-4">Die Gewinn- und Verlustrechnung (GuV) erklärt</h1>
+
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <p class="lead">Die GuV stellt Aufwendungen und Erträge eines Geschäftsjahres gegenüber und zeigt, ob das
+          Unternehmen einen Gewinn oder Verlust erwirtschaftet hat.</p>
+      </div>
+    </div>
+
+    <div class="accordion" id="guvAccordion">
+      <!-- Abschnitt a -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#aufwandErtrag">
+            Aufwand vs. Ertrag
+          </button>
+        </h2>
+        <div id="aufwandErtrag" class="accordion-collapse collapse show" data-bs-parent="#guvAccordion">
+          <div class="accordion-body">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <div class="card h-100 border-danger">
+                  <div class="card-header bg-danger text-white">Aufwand</div>
+                  <div class="card-body">
+                    <p>Werteverzehr durch betriebliche Tätigkeit</p>
+                    <ul>
+                      <li>Materialkosten</li>
+                      <li>Löhne</li>
+                      <li>Mieten</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100 border-success">
+                  <div class="card-header bg-success text-white">Ertrag</div>
+                  <div class="card-body">
+                    <p>Wertezuwachs durch betriebliche Tätigkeit</p>
+                    <ul>
+                      <li>Umsatzerlöse</li>
+                      <li>Zinserträge</li>
+                      <li>Mieterträge</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Abschnitt b -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rhb">
+            RHB-Stoffe
+          </button>
+        </h2>
+        <div id="rhb" class="accordion-collapse collapse" data-bs-parent="#guvAccordion">
+          <div class="accordion-body">
+            <p>Roh-, Hilfs- und Betriebsstoffe sind...</p>
+            <div class="alert alert-info">
+              <strong>Beispiel:</strong> Kauf von Holz für Möbelproduktion: €10.000
+              <button type="button" class="btn btn-sm btn-link" data-bs-toggle="tooltip"
+                title="Werden als Aufwand verbucht">
+                ℹ️
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weitere Abschnitte (c-e) -->
+
+    </div>
+
+    <!-- Quiz -->
+    <div class="card shadow mt-5">
+      <div class="card-header bg-primary text-white">
+        <h5 class="mb-0">Mini-Quiz: Aufwand oder Ertrag?</h5>
+      </div>
+      <div class="card-body">
+        <form id="guvQuiz">
+          <!-- Frage 1 -->
+          <div class="mb-4">
+            <p class="fw-bold">1. Umsatzerlöse aus verkauften Produkten</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q1" value="ertrag" required>
+              <label class="form-check-label">Ertrag</label>
+              <div class="feedback text-muted small mt-1 d-none" data-correct="ertrag">
+                ✔️ Korrekt: Umsatzerlöse sind der Hauptertrag eines Unternehmens aus seiner operativen Tätigkeit.
+              </div>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q1" value="aufwand">
+              <label class="form-check-label">Aufwand</label>
+              <div class="feedback text-muted small mt-1 d-none" data-correct="ertrag">
+                ❌ Falsch: Umsatzerlöse stellen einen Zufluss von Mitteln dar und sind daher ein Ertrag.
+              </div>
+            </div>
+          </div>
+
+          <!-- Frage 2 -->
+          <div class="mb-4">
+            <p class="fw-bold">2. Gehälter der Mitarbeiter</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q2" value="ertrag" required>
+              <label class="form-check-label">Ertrag</label>
+              <div class="feedback text-muted small mt-1 d-none" data-correct="aufwand">
+                ❌ Falsch: Löhne stellen einen Werteverzehr dar, also Aufwand.
+              </div>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q2" value="aufwand">
+              <label class="form-check-label">Aufwand</label>
+              <div class="feedback text-muted small mt-1 d-none" data-correct="aufwand">
+                ✔️ Korrekt: Gehälter sind Personalaufwand für geleistete Arbeit.
+              </div>
+            </div>
+          </div>
+
+          <!-- Frage 3 -->
+          <div class="mb-4">
+            <p class="fw-bold">3. Einkauf von Rohstoffen für die Produktion</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q3" value="ertrag" required>
+              <label class="form-check-label">Ertrag</label>
+              <div class="feedback text-muted small mt-1 d-none" data-correct="aufwand">
+                ❌ Falsch: Der Einkauf verursacht Kosten und zählt zum Aufwand.
+              </div>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q3" value="aufwand">
+              <label class="form-check-label">Aufwand</label>
+              <div class="feedback text-muted small mt-1 d-none" data-correct="aufwand">
+                ✔️ Korrekt: Materialeinsatz zählt als Aufwand.
+              </div>
+            </div>
+          </div>
+
+          <!-- Frage 4 -->
+          <div class="mb-4">
+            <p class="fw-bold">4. Zinserträge aus Bankguthaben</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q4" value="ertrag" required>
+              <label class="form-check-label">Ertrag</label>
+              <div class="feedback text-muted small mt-1 d-none" data-correct="ertrag">
+                ✔️ Korrekt: Zinserträge erhöhen das Vermögen – also ein Ertrag.
+              </div>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q4" value="aufwand">
+              <label class="form-check-label">Aufwand</label>
+              <div class="feedback text-muted small mt-1 d-none" data-correct="ertrag">
+                ❌ Falsch: Zinserträge stellen einen Mittelzufluss dar, also Ertrag.
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Antworten prüfen</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('guvQuiz').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Reset previous feedback
+        document.querySelectorAll('.form-check').forEach(el => {
+          el.classList.remove('text-success', 'text-danger');
+        });
+        document.querySelectorAll('.feedback').forEach(el => el.classList.add('d-none'));
+        const solutions = {
+          q1: 'ertrag',
+          q2: 'aufwand',
+          q3: 'aufwand',
+          q4: 'ertrag'
+        };
+
+        let score = 0;
+
+        for (let i = 1; i <= 4; i++) {
+          const q = `q${i}`;
+          const selected = document.querySelector(`input[name="${q}"]:checked`);
+          const correct = solutions[q];
+
+          if (selected) {
+            const parent = selected.closest('.form-check');
+            const feedback = parent.querySelector('.feedback');
+            if (selected.value === correct) {
+              parent.classList.add('text-success');
+              score++;
+            } else {
+              parent.classList.add('text-danger');
+              // Auch die richtige Antwort grün markieren
+              document.querySelectorAll(`input[name="${q}"]`).forEach(input => {
+                if (input.value === correct) {
+                  input.closest('.form-check').classList.add('text-success');
+                }
+              });
+            }
+            feedback.classList.remove('d-none');
+          }
+        }
+
+        // Vorheriges Ergebnis entfernen, falls vorhanden
+        const prevResult = document.querySelector('.alert');
+        if (prevResult) prevResult.remove();
+
+        const resultHtml = `
+      <div class="alert ${score === 4 ? 'alert-success' : 'alert-warning'} mt-3">
+        <h5>Ergebnis: ${score}/4 richtig</h5>
+        ${score === 4 ? '🎉 Perfekt! Alle Antworten richtig!' : '🔍 Überprüfe die rot markierten Antworten und die Erklärungen!'}
+      </div>
+    `;
+        this.insertAdjacentHTML('beforeend', resultHtml);
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

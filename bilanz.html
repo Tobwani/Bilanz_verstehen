@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bilanz - Lernportal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Bilanz & GuV</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="bilanz.html">Bilanz</a></li>
+          <li class="nav-item"><a class="nav-link" href="guv.html">GuV</a></li>
+          <li class="nav-item"><a class="nav-link" href="produktion.html">Produktion</a></li>
+          <li class="nav-item"><a class="nav-link" href="glossar.html">Glossar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <h1 class="text-primary mb-4">Was ist eine Bilanz?</h1>
+
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <p class="lead">Die Bilanz ist eine Momentaufnahme der Vermögenswerte (Aktiva) und Schulden (Passiva) eines
+          Unternehmens zu einem bestimmten Stichtag. Sie zeigt immer ausgeglichene Seiten - die Summe der Aktiva
+          entspricht stets der Summe der Passiva.</p>
+      </div>
+    </div>
+
+    <!-- Accordion Sektionen -->
+    <div class="accordion" id="bilanzAccordion">
+      <!-- Aufbau der Bilanz -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#aufbau">
+            Aufbau der Bilanz
+          </button>
+        </h2>
+        <div id="aufbau" class="accordion-collapse collapse show" data-bs-parent="#bilanzAccordion">
+          <div class="accordion-body">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <div class="card h-100 border-primary">
+                  <div class="card-header bg-primary text-white">Aktivseite</div>
+                  <div class="card-body">
+                    <p>Vermögenswerte des Unternehmens:</p>
+                    <ul>
+                      <li>Anlagevermögen</li>
+                      <li>Umlaufvermögen</li>
+                      <li>Rechnungsabgrenzung</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="card h-100 border-primary">
+                  <div class="card-header bg-primary text-white">Passivseite</div>
+                  <div class="card-body">
+                    <p>Finanzierung des Vermögens:</p>
+                    <ul>
+                      <li>Eigenkapital</li>
+                      <li>Fremdkapital</li>
+                      <li>Rückstellungen</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="alert alert-info mt-3">💡 Aktivseite = Passivseite (Bilanzsumme immer ausgeglichen)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aktivkonten -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#aktivkonten">
+            Aktivkonten
+          </button>
+        </h2>
+        <div id="aktivkonten" class="accordion-collapse collapse" data-bs-parent="#bilanzAccordion">
+          <div class="accordion-body">
+            <p>Erfassen die Vermögenswerte:</p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <h5>Konto Bank</h5>
+                    <p>Zählt zum Umlaufvermögen</p>
+                    <p class="text-muted">Beispiel: Guthaben €15.000</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <h5>Maschinen</h5>
+                    <p>Zum Anlagevermögen</p>
+                    <p class="text-muted">Beispiel: Wert €200.000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Passivkonten -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#passivkonten">
+            Passivkonten
+          </button>
+        </h2>
+        <div id="passivkonten" class="accordion-collapse collapse" data-bs-parent="#bilanzAccordion">
+          <div class="accordion-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card mb-3 border-primary">
+                  <div class="card-header bg-primary text-white">Verbindlichkeiten aus LL</div>
+                  <div class="card-body">
+                    <p>Kurzfristige Schulden gegenüber Lieferanten</p>
+                    <p class="text-muted">Beispiel: Offene Rechnung über €5.000</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card mb-3 border-primary">
+                  <div class="card-header bg-primary text-white">Darlehen</div>
+                  <div class="card-body">
+                    <p>Langfristige Fremdfinanzierung</p>
+                    <p class="text-muted">Beispiel: Bankdarlehen €100.000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Eigenkapital -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#eigenkapital">
+            Eigenkapital
+          </button>
+        </h2>
+        <div id="eigenkapital" class="accordion-collapse collapse" data-bs-parent="#bilanzAccordion">
+          <div class="accordion-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <h5>Jahresüberschuss</h5>
+                    <p>Erhöht das Eigenkapital</p>
+                    <p class="text-muted">Beispiel: Gewinn 2023: €20.000</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <h5>Jahresfehlbetrag</h5>
+                    <p>Verringert das Eigenkapital</p>
+                    <p class="text-muted">Beispiel: Verlust 2022: €-5.000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="alert alert-info mt-3">
+              Eigenkapital<sub>Ende</sub> = Eigenkapital<sub>Anfang</sub> + Gewinn - Verlust
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bestandsveränderungen -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#bestandsveraenderungen">
+            Bestandsveränderungen
+          </button>
+        </h2>
+        <div id="bestandsveraenderungen" class="accordion-collapse collapse" data-bs-parent="#bilanzAccordion">
+          <div class="accordion-body">
+            <div class="row">
+              <div class="col-md-3 mb-3 text-center">
+                <div class="card">
+                  <div class="card-header">Anfangsbestand</div>
+                  <div class="card-body">
+                    <p class="display-6">€50.000</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 mb-3 text-center">
+                <div class="card">
+                  <div class="card-header bg-success text-white">+ Mehrung</div>
+                  <div class="card-body">
+                    <p class="display-6">€30.000</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 mb-3 text-center">
+                <div class="card">
+                  <div class="card-header bg-danger text-white">- Minderung</div>
+                  <div class="card-body">
+                    <p class="display-6">€10.000</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 mb-3 text-center">
+                <div class="card">
+                  <div class="card-header">Schlussbestand</div>
+                  <div class="card-body">
+                    <p class="display-6 text-primary">€70.000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="formula-box bg-light p-3 rounded">
+              Anfangsbestand + Mehrung - Minderung = Schlussbestand
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Eröffnungs-/Schlussbilanz -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bilanzen">
+            Eröffnungs- & Schlussbilanz
+          </button>
+        </h2>
+        <div id="bilanzen" class="accordion-collapse collapse" data-bs-parent="#bilanzAccordion">
+          <div class="accordion-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card mb-3">
+                  <div class="card-header bg-info text-white">Eröffnungsbilanz</div>
+                  <div class="card-body">
+                    <p>Zeitpunkt: 01.01.2023</p>
+                    <ul>
+                      <li>Aktiva: €150.000</li>
+                      <li>Passiva: €150.000</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card mb-3">
+                  <div class="card-header bg-info text-white">Schlussbilanz</div>
+                  <div class="card-body">
+                    <p>Zeitpunkt: 31.12.2023</p>
+                    <ul>
+                      <li>Aktiva: €180.000</li>
+                      <li>Passiva: €180.000</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="alert alert-info">
+              Die Schlussbilanz wird zur Eröffnungsbilanz der nächsten Periode!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Weitere Accordion-Items hier (Passivkonten, Eigenkapital etc.) -->
+
+    </div>
+
+    <!-- Interaktive Übung -->
+    <div class="card shadow mt-5">
+      <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">Interaktive Übung: Bilanz zuordnen</h5>
+        <button class="btn btn-sm btn-light" onclick="resetExercise()">Zurücksetzen</button>
+      </div>
+      <div class="card-body">
+        <p>Ordne folgende Konten der richtigen Bilanzseite zu:</p>
+        <div class="row" id="bilanzExercise">
+          <div class="col-md-6">
+            <div class="card h-100">
+              <div class="card-header">Aktivseite</div>
+              <div class="card-body droppable" id="aktivSeite"></div>
+            </div>
+          </div>
+          <div class="col-md-6 mt-3 mt-md-0">
+            <div class="card h-100">
+              <div class="card-header">Passivseite</div>
+              <div class="card-body droppable" id="passivSeite"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-3" id="kontenListe">
+          <span class="badge bg-secondary draggable me-2 mb-2" draggable="true">Kasse</span>
+          <span class="badge bg-secondary draggable me-2 mb-2" draggable="true">Fuhrpark</span>
+          <span class="badge bg-secondary draggable me-2 mb-2" draggable="true">Darlehen</span>
+          <span class="badge bg-secondary draggable me-2 mb-2" draggable="true">Eigenkapital</span>
+        </div>
+        <button class="btn btn-primary mt-3" onclick="checkBilanz()">Überprüfen</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Überarbeitete JavaScript-Funktionen
+    let originalItems = [];
+
+    function initializeExercise() {
+      originalItems = [...document.querySelectorAll('#kontenListe .badge')].map(item => {
+        return {
+          text: item.textContent,
+          element: item.cloneNode(true)
+        };
+      });
+    }
+
+    function resetExercise() {
+      // Lösche alle zugeordneten Elemente
+      document.querySelectorAll('.droppable').forEach(zone => zone.innerHTML = '');
+
+      // Baue ursprüngliche Liste wieder auf
+      const kontenListe = document.getElementById('kontenListe');
+      kontenListe.innerHTML = '';
+      originalItems.forEach(item => {
+        const clone = item.element.cloneNode(true);
+        clone.classList.add('draggable');
+        kontenListe.appendChild(clone);
+      });
+
+      // Neue Elemente initialisieren
+      initDragAndDrop();
+    }
+
+    // Drag & Drop Funktionen
+    function handleDragStart(e) {
+      e.dataTransfer.setData('text/plain', e.target.textContent);
+      e.dataTransfer.setData('sourceId', e.target.id);
+    }
+
+    function handleDragOver(e) {
+      e.preventDefault();
+    }
+
+    function handleDrop(e) {
+      e.preventDefault();
+      const data = e.dataTransfer.getData('text/plain');
+      const sourceId = e.dataTransfer.getData('sourceId');
+
+      // Lösche das ursprüngliche Element
+      const sourceElement = document.getElementById(sourceId);
+      if (sourceElement) sourceElement.remove();
+
+      // Erstelle neues Element in der Zielzone
+      const newElement = document.createElement('span');
+      newElement.className = 'badge bg-success me-2 mb-2';
+      newElement.textContent = data;
+      e.target.closest('.droppable').appendChild(newElement);
+    }
+
+    function initDragAndDrop() {
+      // Initialisiere draggable Elemente
+      document.querySelectorAll('.draggable').forEach(item => {
+        item.id = `drag-${Math.random().toString(36).substr(2, 9)}`;
+        item.addEventListener('dragstart', handleDragStart);
+      });
+
+      // Initialisiere droppable Zonen
+      document.querySelectorAll('.droppable').forEach(zone => {
+        zone.addEventListener('dragover', handleDragOver);
+        zone.addEventListener('drop', handleDrop);
+      });
+    }
+
+    function checkBilanz() {
+      const aktiv = [...document.querySelectorAll('#aktivSeite .badge')].map(b => b.textContent);
+      const passiv = [...document.querySelectorAll('#passivSeite .badge')].map(b => b.textContent);
+
+      const correctAktiv = ['Kasse', 'Fuhrpark'];
+      const correctPassiv = ['Darlehen', 'Eigenkapital'];
+
+      const aktCorrect = aktiv.every(item => correctAktiv.includes(item)) && aktiv.length === 2;
+      const pasCorrect = passiv.every(item => correctPassiv.includes(item)) && passiv.length === 2;
+
+      if (aktCorrect && pasCorrect) {
+        alert('Korrekt! 🎉 Die Bilanz ist ausgeglichen.');
+      } else {
+        alert('Noch nicht ganz richtig. Überprüfe deine Zuordnungen!');
+      }
+    }
+
+    // Initialisierung beim Laden
+    window.addEventListener('DOMContentLoaded', () => {
+      initializeExercise();
+      initDragAndDrop();
+    });
+  </script>
+</body>
+
+</html>
